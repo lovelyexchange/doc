@@ -1,1 +1,0 @@
-# lovely-openapi.github.io
