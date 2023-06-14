@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Coinstore official API document</title>
+    <title>Lovely official API document</title>
     <link href="../images/favicon-ab07c47e.ico" rel="icon" type="image/ico">
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -475,14 +475,14 @@
                   </li>
               </ul>
           </li>
-        <li class="create_api"><a target="_blank" href="https://www.coinstore.com/#/user/bindAuth/ManagementAPI">Create API KEY</a></li>
+        <li class="create_api"><a target="_blank" href="https://www.lovely.exchange/#/user/bindAuth/ManagementAPI">Create API KEY</a></li>
       </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to Coinstore Developer Documentation. It is the only official documentation of Coinstore API.</p>
+<p>Welcome to Lovely Developer Documentation. It is the only official documentation of Lovely API.</p>
 
 <p>This documentation provides an introduction to the use of related APIs.</p>
 
@@ -490,11 +490,11 @@
 
 <p>Websocket provides ticker-related interface and push service.</p>
 
-<p>The services provided by Coinstore API will be continuously updated here, so stay tuned for updates.</p>
+<p>The services provided by Lovely API will be continuously updated here, so stay tuned for updates.</p>
 <h1 id='quick-start'>Quick Start</h1><h2 id='access-preparation'>Access Preparation</h2>
 <p>To use API, please log into the webpage first, create an API key through [User Center] - [API Managment], and then develop and trade according to the details of this documentation.</p>
 
-<p>You can click &#39;https://www.coinstore.com/#/user/bindAuth/ManagementAPI&#39; to create an API Key.</p>
+<p>You can click &#39;https://www.lovely.exchange/#/user/bindAuth/ManagementAPI&#39; to create an API Key.</p>
 
 <p>Each user can create 5 groups of API Keys, and each group of API Keys can bind 5 different IP addresses. Once an API key binds an address, the API interface can only be called by using the API key from the bound IP address. For security reasons, it is strongly recommended that you bind the corresponding IP address for API key.</p>
 
@@ -505,7 +505,7 @@
 <li><code>Secret Key</code> Key for encryption of signature authentication</li>
 </ul>
 <h2 id='interface-type'>Interface Type</h2>
-<p>Coinstore provides users with two interfaces, and you can choose the appropriate way to query the ticker and trade according to your own usage scenarios and preferences.</p>
+<p>Lovely provides users with two interfaces, and you can choose the appropriate way to query the ticker and trade according to your own usage scenarios and preferences.</p>
 
 <p><strong>REST API</strong></p>
 
@@ -533,11 +533,11 @@
 <h2 id='access-urls'>Access URLs</h2>
 <p><strong>REST API</strong></p>
 
-<p><code>https://futures.coinstore.com/api</code></p>
+<p><code>https://futures.lovely.exchange/api</code></p>
 
 <p><strong>WebSocket</strong></p>
 
-<p><code>wss://ws-futures.coinstore.com/socket.io/?EIO=3&amp;transport=websocket</code></p>
+<p><code>wss://ws-futures.lovely.exchange/socket.io/?EIO=3&amp;transport=websocket</code></p>
 
 <p>To ensure the stability of API service, it is recommended to access using Japanese AWS cloud server. If the client server in Chinese mainland is used, it would be difficult to guarantee the stability of the connection.</p>
 <h2 id='signature-authentication'><span id="a4"> Signature Authentication </span></h2>
@@ -604,7 +604,7 @@ Note: The request parameters and request body are not sorted but directly splice
 - POST request: Parameters can be set in the path, and they can be sent in JSON format to the request body. If there are no parameters,{} needs to be sent</p>
 
 <p>A licit request consists of the following parts:
-- method request address: Access server address futures.coinstore.com，e.g. https://futures.coinstore.com/api/future/place
+- method request address: Access server address futures.lovely.exchange，e.g. https://futures.lovely.exchange/api/future/place
 - Required and optional parameters.
 - X-CS-APIKEY: API Key applied by the user.
 - X-CS-EXPIRES: Timestamp when you issued the request. For example:1629291143107.
@@ -1727,7 +1727,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='get-active-order-v2'><span id="2">Get active order V2</span></h2>
 <p>Get active order V2 version</p>
-<h4 id='the-new-interface-api-domain-name-address-https-futures-coinstore-com-call-support-for-apikey-and-token'>The new interface API domain name address <code>https://futures.coinstore.com</code>  Call support for ApiKey and Token</h4><h3 id='http-request-8'>HTTP Request:</h3>
+<h4 id='the-new-interface-api-domain-name-address-https-futures-Lovely-com-call-support-for-apikey-and-token'>The new interface API domain name address <code>https://futures.lovely.exchange</code>  Call support for ApiKey and Token</h4><h3 id='http-request-8'>HTTP Request:</h3>
 <ul>
 <li>GET /api/v2/trade/order/active</li>
 </ul>
@@ -1930,7 +1930,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='get-order-info-v2'><span id="2">get order info V2</span></h2>
 <p>get order info V2 version</p>
-<h4 id='the-new-interface-api-domain-name-address-https-futures-coinstore-com-call-support-for-apikey-and-token-2'>The new interface API domain name address <code>https://futures.coinstore.com</code>  Call support for ApiKey and Token</h4><h3 id='http'>HTTP请求:</h3>
+<h4 id='the-new-interface-api-domain-name-address-https-futures-Lovely-com-call-support-for-apikey-and-token-2'>The new interface API domain name address <code>https://futures.lovely.exchange</code>  Call support for ApiKey and Token</h4><h3 id='http'>HTTP请求:</h3>
 <ul>
 <li>GET /api/v2/trade/order/orderInfo</li>
 </ul>
@@ -2792,7 +2792,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='get-user-39-s-all-trade-records-v2'><span id="3">Get user&#39;s all trade records V2</span></h2>
 <p>Get all trade records V2 version</p>
-<h4 id='the-new-interface-api-domain-name-address-https-futures-coinstore-com-call-support-for-apikey-and-token-3'>The new interface API domain name address <code>https://futures.coinstore.com</code>  Call support for ApiKey and Token</h4><h3 id='http-request-14'>HTTP Request:</h3>
+<h4 id='the-new-interface-api-domain-name-address-https-futures-Lovely-com-call-support-for-apikey-and-token-3'>The new interface API domain name address <code>https://futures.lovely.exchange</code>  Call support for ApiKey and Token</h4><h3 id='http-request-14'>HTTP Request:</h3>
 <ul>
 <li>GET /api/v2/trade/order/queryHisMatch</li>
 </ul>
@@ -3704,7 +3704,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h1 id='websocket-ticker-data'>Websocket Ticker Data</h1><h2 id='introduction-2'>Introduction</h2><h3 id='access-url'>Access URL</h3>
 <p><code>
-wss://ws-futures.coinstore.com/socket.io/?EIO=3&amp;transport=websocket
+wss://ws-futures.lovely.exchange/socket.io/?EIO=3&amp;transport=websocket
 </code></p>
 <h3 id='authentication'>Authentication</h3>
 <p>Note: signature: in the same way as restful</p>

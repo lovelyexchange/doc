@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Coinstore官方API文档</title>
+    <title>Lovely官方API文档</title>
     <link href="../images/favicon-ab07c47e.ico" rel="icon" type="image/ico">
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -476,14 +476,14 @@
                   </li>
               </ul>
           </li>
-        <li class="create_api"><a target="_blank" href="https://www.coinstore.com/#/user/bindAuth/ManagementAPI">创建 API Key</a></li>
+        <li class="create_api"><a target="_blank" href="https://www.lovely.exchange/#/user/bindAuth/ManagementAPI">创建 API Key</a></li>
       </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='45fa4e00db'>介绍</h1>
-<p>欢迎使用Coinstore开发者文档，此文档是Coinstore API的唯一官方文档。</p>
+<p>欢迎使用Lovely开发者文档，此文档是Lovely API的唯一官方文档。</p>
 
 <p>本文档提供了相关API的使用方法介绍。</p>
 
@@ -491,11 +491,11 @@
 
 <p>Websocket则提供了行情相关的接口及推送服务。</p>
 
-<p>Coinstore API提供的服务会在此持续更新，请大家及时关注。</p>
+<p>Lovely API提供的服务会在此持续更新，请大家及时关注。</p>
 <h1 id='9e033de16f'>快速开始</h1><h2 id='c1ae0a8486'>接入准备</h2>
 <p>如需使用API，请先登录网页端，通过【用户中心】-【API管理】创建一个API key，再据此文档详情进行开发和交易。</p>
 
-<p>您可以点击 &#39;https://www.coinstore.com/#/user/bindAuth/ManagementAPI&#39; 创建 API Key。</p>
+<p>您可以点击 &#39;https://www.lovely.exchange/#/user/bindAuth/ManagementAPI&#39; 创建 API Key。</p>
 
 <p>每个用户可创建5组API Key，每组API key可以绑定5个不同的IP地址。API key一旦绑定了IP地址，则只能从绑定的IP地址使用该API key调用API接口。出于安全考虑，强烈建议您为API key绑定相应的IP地址。</p>
 
@@ -506,7 +506,7 @@
 <li><code>Secret Key</code> 签名认证加密所使用的密钥</li>
 </ul>
 <h2 id='5076603a3e'>接口类型</h2>
-<p>Coinstore为用户提供两种接口，您可根据自己的使用场景和偏好来选择适合的方式进行查询行情、交易。</p>
+<p>Lovely为用户提供两种接口，您可根据自己的使用场景和偏好来选择适合的方式进行查询行情、交易。</p>
 
 <p><strong>REST API</strong></p>
 
@@ -534,11 +534,11 @@
 <h2 id='urls'>接入URLs</h2>
 <p><strong>REST API</strong></p>
 
-<p><code>https://api.coinstore.com/api</code></p>
+<p><code>https://api.lovely.exchange/api</code></p>
 
 <p><strong>WebSocket</strong></p>
 
-<p><code>wss://ws.coinstore.com/s/ws</code></p>
+<p><code>wss://ws.lovely.exchange/s/ws</code></p>
 
 <p>为保证API服务的稳定性，建议使用日本AWS云服务器进行访问。如使用中国大陆境内的客户端服务器，连接的稳定性将难以保证。</p>
 <h2 id='586f3bcbf4'><span id="a4">签名认证</span></h2>
@@ -598,14 +598,14 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 
 <p><strong>Python示例</strong></p>
 
-<p>https://coinstore-sg-encryption.s3.ap-southeast-1.amazonaws.com/filesUpload/ex1/public/coinstore.py</p>
+<p>https://Lovely-sg-encryption.s3.ap-southeast-1.amazonaws.com/filesUpload/ex1/public/Lovely.py</p>
 <h1 id='api'>API接入说明</h1><h2 id='5b7654a66a'><span id="a3">请求格式</span></h2>
 <p>所有的API请求都是restful，目前只有两种方法：GET和POST。
 - GET请求：所有的参数都在路径参数里
 - POST请求: 路径里可以设置参数，参数可以以JSON格式发送在请求主体（body）里，没有参数的需要传{}</p>
 
 <p>一个合法的请求由以下几部分组成：
-- 方法请求地址：即访问服务器地址api.coinstore.com，比如https://api.coinstore.com/api/trade/order/place
+- 方法请求地址：即访问服务器地址api.lovely.exchange，比如https://api.lovely.exchange/api/trade/order/place
 - 必须和可选参数。
 - X-CS-APIKEY： 即用户申请的API Key。
 - X-CS-EXPIRES：您发出请求的时间戳。如：1629291143107。
@@ -771,7 +771,7 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 <td>账户状态 1:可用 4:冻结</td>
 </tr>
 </tbody></table>
-<h1 id='6631e26181'>资金相关</h1><h2 id='05cec30dc0'><span id="2">资金划转</span></h2><h4 id='lt-gt-api-https-futures-api-coinstore-com-api-apikey-token'>目前支持合约&lt;一&gt;现货划转, API域名地址 <code>https://futures.api.coinstore.com/api</code>  调用支持ApiKey与Token</h4><h3 id='http-2'>HTTP请求:</h3>
+<h1 id='6631e26181'>资金相关</h1><h2 id='05cec30dc0'><span id="2">资金划转</span></h2><h4 id='lt-gt-api-https-futures-api-Lovely-com-api-apikey-token'>目前支持合约&lt;一&gt;现货划转, API域名地址 <code>https://futures.api.lovely.exchange/api</code>  调用支持ApiKey与Token</h4><h3 id='http-2'>HTTP请求:</h3>
 <ul>
 <li>POST /common/account/transfer</li>
 </ul>
@@ -1021,7 +1021,7 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 </tbody></table>
 <h2 id='v2'><span id="3">获取当前订单V2</span></h2>
 <p>获取当前订单 v2 版本</p>
-<h4 id='api-https-api-coinstore-com-apikey-token'>新接口的 API域名地址 <code>https://api.coinstore.com</code>  调用支持ApiKey与Token</h4><h3 id='http-4'>HTTP请求:</h3>
+<h4 id='api-https-api-Lovely-com-apikey-token'>新接口的 API域名地址 <code>https://api.lovely.exchange</code>  调用支持ApiKey与Token</h4><h3 id='http-4'>HTTP请求:</h3>
 <ul>
 <li>GET /api/v2/trade/order/active</li>
 </ul>
@@ -1514,7 +1514,7 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 </tbody></table>
 <h2 id='df83685cc8'><span id="6">创建订单</span></h2>
 <p>创建订单</p>
-<h4 id='50-coinstore'>普通用户的账号同一时间只允许持有 50 笔活动委托，做市账号不受此限制。如果您是做市商但有账号未添加做市账号权限，请联系 Coinstore 交付部门。</h4>
+<h4 id='50-Lovely'>普通用户的账号同一时间只允许持有 50 笔活动委托，做市账号不受此限制。如果您是做市商但有账号未添加做市账号权限，请联系 Lovely 交付部门。</h4>
 <blockquote>
 <p>请求体</p>
 </blockquote>
@@ -1635,7 +1635,7 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 </tbody></table>
 <h2 id='77aaf08979'><span id="13">批量下单</span></h2>
 <p>批量下单</p>
-<h4 id='50-coinstore-2'>普通用户的账号同一时间只允许持有 50 笔活动委托，做市账号不受此限制。如果您是做市商但有账号未添加做市账号权限，请联系 Coinstore 交付部门。</h4>
+<h4 id='50-Lovely-2'>普通用户的账号同一时间只允许持有 50 笔活动委托，做市账号不受此限制。如果您是做市商但有账号未添加做市账号权限，请联系 Lovely 交付部门。</h4>
 <blockquote>
 <p>请求体</p>
 </blockquote>
@@ -2047,7 +2047,7 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 </tbody></table>
 <h2 id='v2-2'><span id="15">获取订单信息V2</span></h2>
 <p>获取订单信息V2</p>
-<h4 id='api-https-api-coinstore-com-apikey-token-2'>新接口的 API域名地址 <code>https://api.coinstore.com</code>  调用支持ApiKey与Token</h4><h3 id='http-12'>HTTP请求:</h3>
+<h4 id='api-https-api-Lovely-com-apikey-token-2'>新接口的 API域名地址 <code>https://api.lovely.exchange</code>  调用支持ApiKey与Token</h4><h3 id='http-12'>HTTP请求:</h3>
 <ul>
 <li>GET /api/v2/trade/order/orderInfo</li>
 </ul>
@@ -2833,7 +2833,7 @@ Mac hmacSha256 = Mac.getInstance(&quot;HmacSHA256&quot;);
 </tr>
 </tbody></table>
 <h1 id='websocket'>Websocket行情数据</h1><h2 id='36d1a17821'><strong>简介</strong></h2><h3 id='url'>接入URL</h3>
-<p>wss://ws.coinstore.com/s/ws</p>
+<p>wss://ws.lovely.exchange/s/ws</p>
 
 <ol>
 <li><p>所有wss接口的 baseurl为: wss://<a href="host:port">host:port</a>/s/ws</p></li>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Official API Document Of Coinstore</title>
+    <title>Official API Document Of Lovely</title>
     <link href="../images/favicon-ab07c47e.ico" rel="icon" type="image/ico">
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -479,14 +479,14 @@
                   </li>
               </ul>
           </li>
-        <li class="create_api"><a target="_blank" href="https://www.coinstore.com/#/user/bindAuth/ManagementAPI">Create API KEY</a></li>
+        <li class="create_api"><a target="_blank" href="https://www.lovely.exchange/#/user/bindAuth/ManagementAPI">Create API KEY</a></li>
       </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to Coinstore Developer Documentation. It is the only official documentation of Coinstore API.</p>
+<p>Welcome to Lovely Developer Documentation. It is the only official documentation of Lovely API.</p>
 
 <p>This documentation provides an introduction to the use of related APIs.</p>
 
@@ -494,11 +494,11 @@
 
 <p>Websocket provides ticker-related interface and push service.</p>
 
-<p>The services provided by Coinstore API will be continuously updated here, so stay tuned for updates.</p>
+<p>The services provided by Lovely API will be continuously updated here, so stay tuned for updates.</p>
 <h1 id='quick-start'>Quick Start</h1><h2 id='access-preparation'>Access Preparation</h2>
 <p>To use API, please log into the webpage first, create an API key through [User Center] - [API Managment], and then develop and trade according to the details of this documentation.</p>
 
-<p>You can click &#39;https://www.coinstore.com/#/user/bindAuth/ManagementAPI&#39; to create an API Key.</p>
+<p>You can click &#39;https://www.lovely.exchange/#/user/bindAuth/ManagementAPI&#39; to create an API Key.</p>
 
 <p>Each user can create 5 groups of API Keys, and each group of API Keys can bind 5 different IP addresses. Once an API key binds an address, the API interface can only be called by using the API key from the bound IP address. For security reasons, it is strongly recommended that you bind the corresponding IP address for API key.</p>
 
@@ -509,7 +509,7 @@
 <li><code>Secret Key</code> Key for encryption of signature authentication</li>
 </ul>
 <h2 id='interface-type'>Interface Type</h2>
-<p>Coinstore provides users with two interfaces, and you can choose the appropriate way to query the ticker and trade according to your own usage scenarios and preferences.</p>
+<p>Lovely provides users with two interfaces, and you can choose the appropriate way to query the ticker and trade according to your own usage scenarios and preferences.</p>
 
 <p><strong>REST API</strong></p>
 
@@ -537,11 +537,11 @@
 <h2 id='access-urls'>Access URLs</h2>
 <p><strong>REST API</strong></p>
 
-<p><code>https://api.coinstore.com/api</code></p>
+<p><code>https://api.lovely.exchange/api</code></p>
 
 <p><strong>WebSocket</strong></p>
 
-<p><code>wss://ws.coinstore.com/s/ws</code></p>
+<p><code>wss://ws.lovely.exchange/s/ws</code></p>
 
 <p>To ensure the stability of API service, it is recommended to access using Japanese AWS cloud server. If the client server in Chinese mainland is used, it would be difficult to guarantee the stability of the connection.</p>
 <h2 id='signature-authentication'><span id="a4"> Signature Authentication </span></h2>
@@ -605,14 +605,14 @@ Note: The request parameters and request body are not sorted but directly splice
 </code></pre></div>
 <p><strong>Python Example</strong></p>
 
-<p>https://coinstore-sg-encryption.s3.ap-southeast-1.amazonaws.com/filesUpload/ex1/public/coinstore.py</p>
+<p>https://Lovely-sg-encryption.s3.ap-southeast-1.amazonaws.com/filesUpload/ex1/public/Lovely.py</p>
 <h1 id='api-access-instructions'>API Access Instructions</h1><h2 id='request-format'><span id="a3"> Request Format </span></h2>
 <p>All API requests are restful, and there are only two methods at present: GET and POST.
 - GET request: All parameters are in path parameters
 - POST request: Parameters can be set in the path, and they can be sent in JSON format to the request body. If there are no parameters,{} needs to be sent</p>
 
 <p>A licit request consists of the following parts:
-- method request address: Access server address api.coinstore.com，e.g. https://api.coinstore.com/api/trade/order/place
+- method request address: Access server address api.lovely.exchange，e.g. https://api.lovely.exchange/api/trade/order/place
 - Required and optional parameters.
 - X-CS-APIKEY: API Key applied by the user.
 - X-CS-EXPIRES: Timestamp when you issued the request. For example:1629291143107.
@@ -788,7 +788,7 @@ needs to be set.</strong></p>
 <td>Account status 1: available 4: deactivated</td>
 </tr>
 </tbody></table>
-<h1 id='funding-related'>Funding Related</h1><h2 id='fund-transfer'><span id="2">Fund transfer</span></h2><h4 id='currently-supporting-contract-lt-gt-spot-transfer-api-domain-name-address-https-futures-api-coinstore-com-api-call-support-for-apikey-and-token'>Currently supporting contract&lt;-&gt;spot transfer, API domain name address <code>https://futures.api.coinstore.com/api</code>  Call support for ApiKey and Token</h4><h3 id='http-request-2'>HTTP Request:</h3>
+<h1 id='funding-related'>Funding Related</h1><h2 id='fund-transfer'><span id="2">Fund transfer</span></h2><h4 id='currently-supporting-contract-lt-gt-spot-transfer-api-domain-name-address-https-futures-api-Lovely-com-api-call-support-for-apikey-and-token'>Currently supporting contract&lt;-&gt;spot transfer, API domain name address <code>https://futures.api.lovely.exchange/api</code>  Call support for ApiKey and Token</h4><h3 id='http-request-2'>HTTP Request:</h3>
 <ul>
 <li>POST /common/account/transfer</li>
 </ul>
@@ -1058,7 +1058,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='get-current-orders-v2'><span id="2"> Get current orders V2 </span></h2>
 <p>Get current order v2 version</p>
-<h4 id='the-new-interface-api-domain-name-address-https-api-coinstore-com-call-support-for-apikey-and-token'>The new interface API domain name address <code>https://api.coinstore.com</code>  Call support for ApiKey and Token</h4><h3 id='http-request-4'>HTTP Request:</h3>
+<h4 id='the-new-interface-api-domain-name-address-https-api-Lovely-com-call-support-for-apikey-and-token'>The new interface API domain name address <code>https://api.lovely.exchange</code>  Call support for ApiKey and Token</h4><h3 id='http-request-4'>HTTP Request:</h3>
 <ul>
 <li>GET /api/v2/trade/order/active</li>
 </ul>
@@ -1602,7 +1602,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='create-order'><span id="6"> Create order </span></h2>
 <p>Create order</p>
-<h4 id='regular-user-accounts-are-only-allowed-to-hold-up-to-50-active-orders-at-the-same-time-while-market-making-accounts-are-not-subject-to-this-restriction-if-you-are-a-market-maker-but-do-not-have-permission-to-add-a-market-making-account-please-contact-the-coinstore-delivery-department'>Regular user accounts are only allowed to hold up to 50 active orders at the same time, while market-making accounts are not subject to this restriction.If you are a market maker but do not have permission to add a market-making account, please contact the Coinstore delivery department.</h4>
+<h4 id='regular-user-accounts-are-only-allowed-to-hold-up-to-50-active-orders-at-the-same-time-while-market-making-accounts-are-not-subject-to-this-restriction-if-you-are-a-market-maker-but-do-not-have-permission-to-add-a-market-making-account-please-contact-the-Lovely-delivery-department'>Regular user accounts are only allowed to hold up to 50 active orders at the same time, while market-making accounts are not subject to this restriction.If you are a market maker but do not have permission to add a market-making account, please contact the Lovely delivery department.</h4>
 <blockquote>
 <p>Request Body</p>
 </blockquote>
@@ -1728,7 +1728,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='batch-ordering'><span id="13"> Batch ordering </span></h2>
 <p>Batch ordering</p>
-<h4 id='regular-user-accounts-are-only-allowed-to-hold-up-to-50-active-orders-at-the-same-time-while-market-making-accounts-are-not-subject-to-this-restriction-if-you-are-a-market-maker-but-do-not-have-permission-to-add-a-market-making-account-please-contact-the-coinstore-delivery-department-2'>Regular user accounts are only allowed to hold up to 50 active orders at the same time, while market-making accounts are not subject to this restriction.If you are a market maker but do not have permission to add a market-making account, please contact the Coinstore delivery department.</h4>
+<h4 id='regular-user-accounts-are-only-allowed-to-hold-up-to-50-active-orders-at-the-same-time-while-market-making-accounts-are-not-subject-to-this-restriction-if-you-are-a-market-maker-but-do-not-have-permission-to-add-a-market-making-account-please-contact-the-Lovely-delivery-department-2'>Regular user accounts are only allowed to hold up to 50 active orders at the same time, while market-making accounts are not subject to this restriction.If you are a market maker but do not have permission to add a market-making account, please contact the Lovely delivery department.</h4>
 <blockquote>
 <p>Request Body</p>
 </blockquote>
@@ -2171,7 +2171,7 @@ needs to be set.</strong></p>
 </tbody></table>
 <h2 id='get-order-information-v2'><span id="14">Get order information V2 </span></h2>
 <p>Get order information v2</p>
-<h4 id='the-new-interface-api-domain-name-address-https-api-coinstore-com-call-support-for-apikey-and-token-2'>The new interface API domain name address <code>https://api.coinstore.com</code>  Call support for ApiKey and Token</h4><h3 id='http-request-12'>HTTP Request:</h3>
+<h4 id='the-new-interface-api-domain-name-address-https-api-Lovely-com-call-support-for-apikey-and-token-2'>The new interface API domain name address <code>https://api.lovely.exchange</code>  Call support for ApiKey and Token</h4><h3 id='http-request-12'>HTTP Request:</h3>
 <ul>
 <li>GET /api/v2/trade/order/orderInfo</li>
 </ul>
@@ -2986,7 +2986,7 @@ needs to be set.</strong></p>
 </tr>
 </tbody></table>
 <h1 id='websocket-ticker-data'>Websocket Ticker Data</h1><h2 id='introduction-2'><strong>Introduction</strong></h2><h3 id='access-url'>Access URL</h3>
-<p>wss://ws.coinstore.com/s/ws</p>
+<p>wss://ws.lovely.exchange/s/ws</p>
 
 <ol>
 <li><p>The baseurl of all wss interfaces is: wss://<a href="host:port">host:port</a>/s/ws</p></li>
